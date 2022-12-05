@@ -46,7 +46,7 @@ for move in moves: #something probably wrong below here
     try:
         for n in range(int(move[5])):
             stack_name = 'stack' + str(move[12])
-            crate_to_move = globals().pop(-1)
+            crate_to_move = globals()[stack_name].pop(-1)
             stack_name = 'stack' + str(move[17])
             globals()[stack_name].append(crate_to_move)
     except:
