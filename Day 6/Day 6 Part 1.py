@@ -12,19 +12,14 @@ def check_duplicate(list):
         return True
 
 def marker(string):
-    stop = False
-    while not stop:
-        for n in range(len(string)):
-            packet_range = []
-            for i in range(4):
-                packet_range.append((string[i+n]))
+    for n in range(len(string)):
+        packet_range = []
+        for i in range(4):
+            packet_range.append((string[i+n]))
             duplicate = check_duplicate(packet_range)
-            if duplicate == True:
-                pass
-            else:
-                stop = True
-                print(n+4)
-                break
-
-
+        if duplicate:
+            pass
+        else:
+            print(n+4)
+            break
 marker(All_lines)
