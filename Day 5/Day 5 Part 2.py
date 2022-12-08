@@ -35,7 +35,6 @@ for index_nr in stack_index:
     stack_name = 'stack' + str(stack_nr[index_nr])
     globals()[str(stack_name)].reverse()
 
-
 for move in moves: #something probably wrong below here
     crates_to_move = []
     try:
@@ -60,11 +59,9 @@ for move in moves: #something probably wrong below here
             stack_name = 'stack' + str(move[18])
             globals()[stack_name].append(crate)
 
-
 for n in range(10):
     try:
         stack_name = 'stack'+str(n)
         print(globals()[stack_name][-1])
-
     except:
         pass
