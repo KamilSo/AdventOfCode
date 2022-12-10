@@ -52,7 +52,6 @@ def sort_and_display():
     for coord in Tail:
         if coord not in unique:
             unique.append(coord)
-    print(unique)
     print(len(unique))
 
 perform_moves()
