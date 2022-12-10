@@ -6,7 +6,6 @@ Data = [x.replace('addx','a') for x in Data]
 Data = [x.split(' ') for x in Data]
 Cycle = 1
 Register = 1
-Signal_s = []
 Crt_display = []
 
 def check_defined_cycles():
