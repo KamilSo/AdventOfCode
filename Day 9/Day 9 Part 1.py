@@ -20,15 +20,6 @@ def perform_moves():
             append_copy = copy.deepcopy(Head_start)
             Head.append(append_copy)
 
-def Tail_range_fun():
-    Tail_rg = []
-    Coord = Tail[-1]
-    Tail_rg.append([Coord[0] + 1,Coord[1] - 1])
-    Tail_rg.append([Coord[0] - 1, Coord[1] + 1])
-    Tail_rg.append([Coord[0] - 1, Coord[1] - 1])
-    Tail_rg.append([Coord[0] + 1, Coord[1] + 1])
-    return Tail_rg
-
 def Check_corner_dulplicate():
     Tail_range = [[1,1],[1,0],[0,0],[0,1]]
     for index,Coords in enumerate(Head):
@@ -42,10 +33,7 @@ def Check_corner_dulplicate():
             Coord_diff = [abs(Head_next_move[0] - Tail_coords[0]), abs(Head_next_move[1] - Tail_coords[1])]
             if Coord_diff not in Tail_range:
                 Tail_append = Coords
-        try:
-            Tail.append(Tail_append)
-        except:
-            pass
+        Tail.append(Tail_append)
 
 def sort_and_display():
     unique = []
@@ -56,5 +44,7 @@ def sort_and_display():
 
 perform_moves()
 Check_corner_dulplicate()
+print(Head)
+print(Tail)
 sort_and_display()
 
